@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("https://ancient-everglades-66739.herokuapp.com/");
 
 // Get DOM elements in respective Js variables
 const form = document.getElementById("send-container");
