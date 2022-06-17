@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    --graientOne: linear-gradient(35deg, #9093ff, #30fbff);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to right, #343434 0%, #000000 100%);
+    color: aquamarine;
+}
+
+header {
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.chat-container {
+    padding: 2rem;
+    margin: auto;
+    background-image: var(--graientOne);
+    height: 60vh;
+    overflow-x: auto;
+    width: 90vw;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.msg {
+    padding: 1rem;
+    background-color: #303030;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.left {
+    clear: both;
+    float: left;
+}
+
+.right {
+    float: right;
+    clear: both;
+    text-align: right;
+}
+
+
+/* .sender-name,
+.receiver-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+} */
+
+.send-container {
+    padding: 1.5rem;
+    background-image: var(--graientOne);
+    margin: 1rem;
+    overflow-y: auto;
+    width: 90vw;
+    border-radius: 0.5rem;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #303030;
+    color: aquamarine;
+}
+
+button {
+    width: 15%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #303030;
+    color: aquamarine;
+}
+
+:focus-visible {
+    outline: 2px solid aquamarine;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: aquamarine;
+    border-radius: 1rem;
+}
+
+::selection {
+    background: rgb(0, 123, 255, 0.3);
+}
