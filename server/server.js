@@ -8,11 +8,11 @@ const io = require("socket.io")(server, {
   },
 });
 
-let port = 3000;
+
 
 const users = [];
 
-server.listen(port, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log("listening at port 3000");
 });
 
