@@ -4,6 +4,11 @@ const socket = io("https://ancient-everglades-66739.herokuapp.com/");
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById("messageInp");
 const messageContainer = document.querySelector(".chat-container");
+const name_value = document.querySelector(".modal input");
+const modal = document.querySelector(".modal");
+const modal_btn = modal.querySelector("button");
+const Password = document.querySelector(".password");
+const join_msg = document.querySelector(".join-msg");
 
 // Audio that will play on receiving messages
 var audio = new Audio("ting.mp3");
@@ -19,6 +24,32 @@ const append = (message, position) => {
     audio.play();
   }
 };
+
+//modal and password stuff
+
+modal_btn.addEventListener("click", addUser);
+name_value.addEventListener("click", () => {
+  Password.classList.remove("disappear");
+});
+Password.addEventListener(
+  "click",
+  () => (Password.placeholder = "Enter Password")
+);
+
+function addUser(e) {
+  e.preventDefault();
+  let name = name_value.value;
+
+  if (!name) {
+    return alert("You must add a user name");
+  }
+  if (Password.value != "pacific_black") {
+    return alert("Wrong Password");
+  }
+  socket.emit("new-user-joined", name);
+  modal.classList.add("disappear");
+  join_msg.classList.remove("disappear");
+}
 
 // Ask new user for his/her name and let the server know
 const name = prompt("Enter your name to join");
