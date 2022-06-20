@@ -50,15 +50,6 @@ header {
     text-align: right;
 }
 
-
-/* .sender-name,
-.receiver-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: left;
-    display: block;
-} */
-
 .send-container {
     padding: 1.5rem;
     background-image: var(--graientOne);
@@ -68,8 +59,9 @@ header {
     border-radius: 0.5rem;
 }
 
-form {
+#send-container {
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
 }
 
@@ -84,7 +76,6 @@ input {
 }
 
 button {
-    width: 15%;
     padding: 1rem;
     border-radius: 0.5rem;
     border: none;
@@ -92,6 +83,8 @@ button {
     background-color: #303030;
     color: aquamarine;
 }
+
+
 
 :focus-visible {
     outline: 2px solid aquamarine;
@@ -113,3 +106,110 @@ button {
 ::selection {
     background: rgb(0, 123, 255, 0.3);
 }
+
+.modal.disappear,
+.disappear {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  max-width: 50%;
+  min-height: 200px;
+  background: #00000033;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 0 0 100vh #000000;
+}
+
+.modal h1 {
+  font-size: 4rem;
+  margin: 1rem;
+  color: transparent;
+  background: linear-gradient(45deg, #004eff, black);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.modal input {
+  width: 14rem;
+  margin-right: 1.5rem;
+}
+
+.modal button {
+  width: fit-content;
+}
+
+
+.password {
+  margin-block: 1rem!important;
+  width: 90% !important;
+  text-align: center;
+  margin-right: 0 !important;
+}
+
+.join-msg {
+  margin: 0 auto 1rem;
+}
+
+.join p {
+  font-size: 3rem;
+}
+
+
+
+@media (max-width: 980px) {
+
+  .modal{
+  max-width: 70%;
+}
+  
+  .modal input,.password {
+  margin: auto;
+  width: 70%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+}
+
+@media (max-width: 750px) {
+  
+.modal{
+  max-width: 90%;
+}
+
+
+  .modal h1{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .modal{
+  max-width: 100%;
+}
+  header{
+    font-size: 1.5rem;
+  }
+
+  .send-container{
+    padding: 1rem;
+  }
+  input{
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  
+  header{
+    font-size: 1.2rem;
+  }
+  input{
+    font-size: 1.3rem;
+  }
+}
+
+
