@@ -204,7 +204,10 @@ button {
 }
 
 @media (max-width: 400px) {
-  
+    
+  .chat-container{
+        padding:1rem;
+  }
   header{
     font-size: 1.2rem;
   }
@@ -215,6 +218,7 @@ button {
     margin-right: 0rem;
     width: 80%;
   }
-}
+    
+    
 
 
