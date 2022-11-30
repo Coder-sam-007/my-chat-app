@@ -1,114 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Chatty App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"
+    ></script>
+    <script defer src="main.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alma Chat App</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
-  <script defer src="main.js"></script>
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="logo">
-        <a href="./index.html">
-          <h1>Alma<span>Link</span></h1>
-        </a>
-      </div>
-      <nav class="menu-list">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#explore-university">Explore Colleges</a></li>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="/contact-us.html" target="_blank">Contact Us</a></li>
-        </ul>
-      </nav>
-      <div class="sign-options">
-        <a href="" id="sign-up">Sign Up</a>
-        <a href="" id="sign-in">Sign In</a>
-      </div>
-      <div class="hamburger-menu">
-        <div class="bar"></div>
-      </div>
+  <body>
+    <header>
+      <h1>Our Chatty App</h1>
+    </header>
+    <div class="chat-container">
+    <form class="modal">
+        <h1>Welcome</h1>
+        <input placeholder="What's ur name.." type="text" />
+        <button type="submit">Submit</button>
+        <input
+          class="password disappear"
+          placeholder="Surprise.. 😁😁"
+          type="password"
+        />
+      </form>
+      <div class="msg join-msg disappear"><p>You joined the chat</p></div>
     </div>
-  </header>
-
-  <h1>
-    Almalink Chat App
-  </h1>
-
-  <div class="chat-container">
-    <!-- <form class="modal">
-      <h1>Welcome</h1>
-      <input placeholder="What's ur name.." type="text" />
-      <button type="submit">Submit</button>
-      <input class="password disappear" placeholder="Surprise.. 😁😁" type="password" />
-    </form> -->
-    <div class="msg join-msg disappear">
-      <p>You joined the chat</p>
+    <div class="send-container">
+      <form action="#" id="send-container">
+        <input
+          type="text"
+          name="messageInp"
+          id="messageInp"
+          placeholder="Write here.."
+        />
+        <button class="btn" type="submit">Send</button>
+      </form>
     </div>
-  </div>
-  <div class="send-container">
-    <form action="#" id="send-container">
-      <input type="text" name="messageInp" id="messageInp" placeholder="Write here.." />
-      <button class="btn" type="submit">Send</button>
-    </form>
-  </div>
-
-  <footer>
-    <div class="row">
-      <div class="col">
-        <img src="7.png" class="footer_logo">
-        <p class="footer_about">Past building the future...</p>
-        <p class="footer_email">team.almalink@gmail.com</p>
-      </div>
-      <div class="col">
-        <h3>Team ALMALINK <div class="bottom_line"><span></span></div>
-        </h3>
-        <p>Debabrata Danasana (Mentor)</p>
-        <p>Soumya Podha (Leader)</p>
-        <p>Sameer Jain</p>
-        <p>Parta Pratim Khamari</p>
-        <p>Gitanjali Meher</p>
-
-      </div>
-      <div class="col">
-        <h3>Links <div class="bottom_line"><span></span></div>
-        </h3>
-        <ul>
-          <li><a href="">HOME</a></li>
-          <li><a href="">EXPLORE COLLEGES</a></li>
-          <li><a href="">ABOUT US</a></li>
-          <li><a href="">CONTACT US</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3>Newsletter <div class="bottom_line"><span></span></div>
-        </h3>
-        <form>
-          <ion-icon class="icon" name="mail"></ion-icon>
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">
-            <ion-icon class="icon_right" name="arrow-round-forward"></ion-icon>
-          </button>
-        </form>
-        <div class="social_icons">
-          <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
-          <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
-          <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
-          <ion-icon class="social_icon" name="logo-youtube"></ion-icon>
-        </div>
-      </div>
-    </div>`
-    <hr>
-    <p class="copyright">Copyright - Team ALMALINK Ⓒ 2022 - All Rights Reserved</p>
-  </footer>
-</body>
-
+  </body>
 </html>
