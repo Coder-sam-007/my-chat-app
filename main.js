@@ -1,4 +1,4 @@
-const socket = io("https://ancient-everglades-66739.herokuapp.com/");
+const socket = io("https://my-chat-app-enz0.onrender.com");
 
 // Get DOM elements in respective Js variables
 const form = document.getElementById("send-container");
